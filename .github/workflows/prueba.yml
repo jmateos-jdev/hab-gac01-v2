@@ -1,0 +1,14 @@
+name: Prueba
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  Saludar:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "Hola mundo"
+      - run: echo "Chau mundo"
+
