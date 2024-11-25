@@ -6,17 +6,24 @@ on:
       - main
 
 jobs:
+
   Saludar:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
     steps:
+      - run: |
+          curl ipinfo.io
       - run: echo "Hola mundo"
       - run: echo "Chau mundo"
+
   Mostrar_Hora:
     runs-on: ubuntu-20.04
     steps:
+      - run: |
+          curl ipinfo.io
       - run: echo "La hora es $(date)"
+
   Mostrar_ubicacion:
-    runs-on: ubuntu-20.04
+    runs-on: windows-2022
     steps:
       - run: |
           curl ipinfo.io
