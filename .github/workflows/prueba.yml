@@ -3,7 +3,7 @@ name: Prueba
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   Saludar:
@@ -11,4 +11,13 @@ jobs:
     steps:
       - run: echo "Hola mundo"
       - run: echo "Chau mundo"
+  Mostrar_Hora:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "La hora es $(date)"
+  Mostrar_ubicacion:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: |
+          curl ipinfo.io
 
