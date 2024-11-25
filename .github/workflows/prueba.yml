@@ -3,7 +3,7 @@ name: Prueba
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   Saludar:
