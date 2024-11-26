@@ -2,13 +2,13 @@ name: SonarQube Analysis
 
 on:
   pull_request:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   sonarqube:
     name: SonarQube Scan
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4.2.2
@@ -19,3 +19,8 @@ jobs:
         uses: SonarSource/sonarcloud-github-action@v3.1.0
         env:
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: >
+            -Dsonar.organization=jmateos-jdev
+            -Dsonar.projectKey=jmateos-jdev_hab-gac01-v2
