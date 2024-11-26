@@ -17,5 +17,3 @@ jobs:
         run: npm install -g prettier
       - name: Revisar archivos con Prettier
         run: prettier --check .
-    
-

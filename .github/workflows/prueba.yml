@@ -6,7 +6,6 @@ on:
       - main
 
 jobs:
-
   Saludar:
     runs-on: ubuntu-22.04
     steps:
@@ -27,4 +26,3 @@ jobs:
     steps:
       - run: |
           curl ipinfo.io
-
