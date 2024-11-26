@@ -11,5 +11,11 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+      - name: Usar Node.js
+        uses: actions/setup-node@v4.1.0
+      - name: Instalar Prettier
+        run: npm install -g prettier
+      - name: Revisar archivos con Prettier
+        run: prettier --check .
     
 
