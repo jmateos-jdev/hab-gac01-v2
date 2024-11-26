@@ -2,6 +2,14 @@ import Image from "next/image";
 import styles from "./page.module.css";
 
 export default function Home() {
+  const token = "9e36225c58773c37a86db8b6882515104ac2450b";
+
+  if (token) {
+    console.log("Token is valid");
+  } else {
+    console.log("Token is invalid");
+  }
+
   return (
     <div className={styles.page}>
       <main className={styles.main}>
