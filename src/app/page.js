@@ -14,9 +14,8 @@ export default function Home() {
           priority
         />
         <ol>
-          <li>
-            Get started by editing <code>src/app/page.js</code>.
-          </li>
+          <li>Saludos desde Hack A Boss</li>
+
           <li>Save and see your changes instantly.</li>
         </ol>
 
