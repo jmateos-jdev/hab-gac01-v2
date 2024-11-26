@@ -14,9 +14,7 @@ export default function Home() {
           priority
         />
         <ol>
-          <li>Saludos desde Hack A Boss</li>
-
-          <li>Save and see your changes instantly.</li>
+          <li>Saludos</li>
         </ol>
 
         <div className={styles.ctas}>
@@ -35,14 +33,6 @@ export default function Home() {
             />
             Deploy now
           </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
-          </a>
         </div>
       </main>
       <footer className={styles.footer}>
@@ -51,13 +41,6 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
           Learn
         </a>
         <a
@@ -72,7 +55,7 @@ export default function Home() {
             width={16}
             height={16}
           />
-          Examples
+          Example
         </a>
         <a
           href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
