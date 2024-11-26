@@ -14,9 +14,7 @@ export default function Home() {
           priority
         />
         <ol>
-          
-          <li>
-            Saludos desde Hack A Boss</li>
+          <li>Saludos desde Hack A Boss</li>
 
           <li>Save and see your changes instantly.</li>
         </ol>
