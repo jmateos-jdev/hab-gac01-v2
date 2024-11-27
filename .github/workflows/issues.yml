@@ -2,7 +2,7 @@ name: Issues Pipeline Example
 
 on:
   issues:
-    types: [opened, edited, closed,]
+    types: [opened, edited, closed]
 
 jobs:
   build:
