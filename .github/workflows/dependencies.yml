@@ -36,7 +36,7 @@ jobs:
           echo "Error: Prettier failed"
 
   build:
-    needs: [prettier, mostrar_ubicacion, mensaje_error]
+    needs: [prettier, mostrar_ubicacion]
     runs-on: ubuntu-20.04
     if: ${{ success() }}
     steps:
