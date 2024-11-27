@@ -37,8 +37,9 @@ jobs:
           echo "Error: Prettier failed"
 
   build:
-    needs: [prettier, mostrar_ubicacion]
+    needs: [prettier, mostrar_ubicacion, mensaje_error]
     runs-on: ubuntu-20.04
+    if: ${{ success() }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
