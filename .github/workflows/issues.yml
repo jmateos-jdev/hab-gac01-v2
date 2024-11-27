@@ -1,0 +1,11 @@
+name: Issues Pipeline Example
+
+on:
+  issues:
+    types: [opened, edited, closed,]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Hello, world!"
