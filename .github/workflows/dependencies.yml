@@ -4,7 +4,7 @@ on:
   workflow_dispatch:
 
 jobs:
-    
+
   mostrar_ubicacion:
     runs-on: ubuntu-20.04
     steps:
@@ -28,8 +28,9 @@ jobs:
         run: prettier --check .
 
   mensaje_error:
-    if: failure()
+    needs: prettier
     runs-on: ubuntu-20.04
+    if: needs.prettier.result == 'failure'
     steps:
       - name: Mensaje de error
         run: |
