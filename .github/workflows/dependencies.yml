@@ -4,6 +4,14 @@ on:
   workflow_dispatch:
 
 jobs:
+    
+  mostrar_ubicacion:
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Mostrar ubicación
+        run: |
+          echo "Current directory: $(pwd)"
+
   prettier:
     #uses: ./.github/workflows/prettier.yml
     runs-on: ubuntu-20.04
@@ -19,8 +27,16 @@ jobs:
       - name: Revisar archivos con Prettier
         run: prettier --check .
 
+  mensaje_error:
+    if: failure()
+    runs-on: ubuntu-20.04
+    steps:
+      - name: Mensaje de error
+        run: |
+          echo "Error: Prettier failed"
+
   build:
-    needs: prettier
+    needs: [prettier, mostrar_ubicacion]
     runs-on: ubuntu-20.04
     steps:
       - name: Checkout
