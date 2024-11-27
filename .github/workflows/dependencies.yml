@@ -1,0 +1,35 @@
+name: Tareas Dependentes
+
+on:
+  workflow_dispatch:
+
+jobs:
+  prettier:
+    #uses: ./.github/workflows/prettier.yml
+    runs-on: ubuntu-20.04
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4.2.2
+        - name: Usar Node.js
+          uses: actions/setup-node@v4.1.0
+          with:
+            node-version: 20.x
+        - name: Instalar Prettier
+          run: npm install -g prettier
+        - name: Revisar archivos con Prettier
+          run: prettier --check .
+
+  build:
+    needs: prettier
+    runs-on: ubuntu-20.04
+    steps:
+        - name: Checkout
+          uses: actions/checkout@v4.2.2
+        - name: Usar Node.js
+          uses: actions/setup-node@v4.1.0
+          with:
+            node-version: 20.x
+        - name: Instalar Dependencias
+          run: npm install
+        - name: Build
+          run: npm run build
