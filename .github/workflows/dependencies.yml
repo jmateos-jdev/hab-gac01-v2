@@ -30,7 +30,7 @@ jobs:
   mensaje_error:
     needs: prettier
     runs-on: ubuntu-20.04
-    if: ${{ failure() && needs.prettier.result == 'failure' }}
+    if: ${{ failure() }}
     steps:
       - name: Mensaje de error
         run: |
