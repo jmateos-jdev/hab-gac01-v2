@@ -11,12 +11,15 @@ jobs:
     strategy:
       matrix:
         os: [ubuntu-22.04, windows-2022, macos-14]
+        node-version: [18.x, 20.x, 22.x]
     runs-on: ${{ matrix.os }}
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
       - name: Usar Node.js
         uses: actions/setup-node@v4.1.0
+        with:
+          node-version: ${{ matrix.node-version }}
       - name: Instalar Prettier
         run: npm install -g prettier
       - name: Revisar archivos con Prettier
